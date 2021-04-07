@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<title>CREDIT CARD FRAUD DETECTION</title>
+    <link rel="stylesheet" href="static/style.css">
+
+
+<script>
+// Defining a function to display error message
+function printError(elemId, hintMsg) 
+{
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var age = document.contactForm.age.value;
+    
+    
+	// Defining error variables with a default value
+    var ageErr =true;
+    
+    // Validate name
+    if(age>100)
+	{
+        printError("ageErr", "Age should not be greater then 100");
+    } 
+	else {
+            printError("ageErr", "");
+            nameErr = false;
+        }
+    
+    
+   
+    
+};
+</script>
+
+</head>
+   <body>
+   <a href="/" style="float:right;text-decoration:none; padding-right: 200px;" class="hm"><h1 style="color:white;">Home </h1>&nbsp&nbsp&nbsp&nbsp</a>
+<br>
+   
+      <form class="signup-form" name="contactForm"  
+	  action = "{{ url_for('predict') }}" method = "POST">
+         
+         <div class="form-header">
+        <h1>Predict Credit Card Fraud</h1>
+      </div>
+
+      <!-- form body -->
+	  
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+		
+        <div >
+		
+          <div class="form-group left">
+            <label for="firstname" class="label-title">Age&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" id="firstname"  name = "age" placeholder="enter your first age" required="required" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+			<div class="error" id="ageErr"></div>
+          </div>
+          <div class="form-group left">
+		  
+            <label for="lastname" class="label-title">Sex&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <select name="sex" width="100" height="48">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+ 
+</select>
+          </div>
+        
+
+        <!-- Email -->
+        <div class="form-group left">
+          <label for="email" class="label-title">Job</label>
+          <input type="text" id="email" class="form-input" name = "job" placeholder="enter your job id" required="required">
+		  <div class="error" id="jobErr"></div>
+        </div>
+
+        <!-- Passwrod and confirm password -->
+        
+          <div class="form-group left">
+            <label for="password" class="label-title" >Housing&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <td>
+		 <select name="housing">
+  <option value="own">own</option>
+  <option value="free">free</option>
+  <option value="rent">rent</option>
+ 
+</select>
+</td>
+          </div>
+          <div class="form-group left">
+            <label for="confirm-password" class="label-title">Saving account&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <select name="saving_account">
+  <option value="little">little</option>
+  <option value="moderate">moderate</option>
+  <option value="quite rich">quite rich</option>
+ 
+</select>
+          </div>
+        </div>
+
+        <!-- Gender and Hobbies -->
+       
+          <div class="form-group left">
+            <label class="label-title">Checking account&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </label>
+            
+              <select name="check_acc">
+  <option value="little">little</option>
+  <option value="moderate">moderate</option>
+  <option value="quite rich">quite rich</option>
+ 
+</select>
+            
+         </div>
+          <div class="form-group left">
+            <label class="label-title" >Credit amount</label>
+            <div >
+             <input type="text" id="firstname" name = "credit_amt" class="form-input" placeholder="enter your first name" required="required" />
+            </div>
+          </div>
+        
+
+        <!-- Source of Income and Income -->
+        <div >
+         <div class="form-group left">
+            <label class="label-title">Duration</label>
+            <input type="text" id="firstname" name = "duration" class="form-input" placeholder="enter your first name" required="required" />
+          </div>
+          <div class="form-group left">
+            <label for="experience" class="label-title">Purpose&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <select name="purpose">
+  <option value="car">car</option>
+  <option value="radio/TV">radio/TV</option>
+  <option value="furniture/equipment">furniture/equipment</option>
+  <option value="business">business</option>
+  <option value="education">education</option>
+  <option value="repairs">repairs</option>
+  <option value="domestic appliances">domestic appliances</option>
+   <option value="dvacation/others">vacation/others</option>
+ 
+</select>
+          </div>
+        </div>
+
+        
+      <!-- form-footer -->
+      <div class="form-footer">
+        
+        <button type="submit" class="btn" value="submit">Submit</button>
+      </div>
+
+    </form>
+
+  
+   </body>
+</html>

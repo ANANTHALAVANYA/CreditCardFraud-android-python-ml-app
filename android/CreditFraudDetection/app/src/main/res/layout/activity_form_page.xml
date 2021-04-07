@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FormPage">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--    Image-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/credit"/>
+            <!--    Heading-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Form"
+                android:textColor="@color/purple_500"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginTop="20sp"/>
+            <!--    Age of the user-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter your Age"
+                android:id="@+id/et_age"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"/>
+            <!--    Gender of the user-->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp"
+                android:id="@+id/rg_gender">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:layout_marginLeft="10sp"
+                    android:textSize="20dp" />
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="Female"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <!--id of the user-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter your job id"
+                android:id="@+id/et_Job"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"/>
+
+            <!-- Housing value-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:id="@+id/rg_housing"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Housing"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+                <RadioButton android:id="@+id/radio_housing1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="own"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_housing2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="free"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_housing3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rent"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <!-- saving account value-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:id="@+id/rg_savingaccount"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SavingAccount"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+                <RadioButton android:id="@+id/radio_sa1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="little"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_sa2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="moderate"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_sa3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="quite rich"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <!-- checking accountvalue-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:id="@+id/rg_checkingaccount"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CheckingAccount"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+                <RadioButton android:id="@+id/radio_ca1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="little"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_ca2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="moderate"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_ca3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="quite rich"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter your Credit Amount"
+                android:id="@+id/et_creditamount"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter duration"
+                android:id="@+id/et_duration"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"/>
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:id="@+id/rg_purpose"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purpose"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+                <RadioButton android:id="@+id/radio_p1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="car"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="radio/tv"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_p3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="business"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_p4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="education"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_p5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="furniture/equipment"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_p6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="repairs"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_p7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="vacation/others"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_p8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="domestic appliances"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <!--    Submit button for response-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:textAllCaps="false"
+                android:text="Submit"
+                android:background="@color/purple_200"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/resButton"
+                android:onClick="MoveResult"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
