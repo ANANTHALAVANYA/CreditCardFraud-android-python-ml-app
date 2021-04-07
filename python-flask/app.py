@@ -25,11 +25,11 @@ def predict():
         l=[]
         int_features=[] 
         
-        age=request.form['age']
+        age=request.json['age']
         l.append(age)
         int_features.append(int(age))
         ##
-        sex=request.form['sex']
+        sex=request.json['sex']
         l.append(sex)
         if sex=='FeMale':
             sex1=1
@@ -37,11 +37,11 @@ def predict():
             sex1=0
         int_features.append(int(sex1))
         ##
-        job=request.form['job']
+        job=request.json['job']
         l.append(job)
         int_features.append(int(job))
         
-        housing=request.form['housing']
+        housing=request.json['housing']
         l.append(housing)
         if housing=='own':
             housing=0
@@ -51,7 +51,7 @@ def predict():
             housing=2
         int_features.append(int(housing))
         
-        saving_account=request.form['saving_account']
+        saving_account=request.json['saving_account']
         l.append(saving_account)
         
         if saving_account=='little':
@@ -62,7 +62,7 @@ def predict():
             saving_account=2
         int_features.append(int(saving_account))
         
-        checking_account=request.form['check_acc']
+        checking_account=request.json['check_acc']
         l.append(checking_account)
         if checking_account=='little':
             checking_account=0
@@ -72,15 +72,15 @@ def predict():
             checking_account=2
         int_features.append(int(checking_account))
         
-        credit_amount=request.form['credit_amt']
+        credit_amount=request.json['credit_amt']
         l.append(credit_amount)
         int_features.append(int(credit_amount))
         
-        duration=request.form['duration']
+        duration=request.json['duration']
         l.append(duration)
         int_features.append(int(duration))
         
-        purpose=request.form['purpose']
+        purpose=request.json['purpose']
         l.append(purpose)
         if purpose=='car':
             purpose=0
