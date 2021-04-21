@@ -232,7 +232,7 @@ os= SMOTE(random_state=20)
 os_data_x,os_data_y=os.fit_sample(x,y)  
 pd.DataFrame(data=os_data_x,columns=x.columns)
 pd.DataFrame(data=os_data_y,columns=['Risk'])
-x_train,x_test,y_train,y_test=train_test_split( os_data_x,os_data_y,test_size=0.20,random_state=100)
+x_train,x_test,y_train,y_test=train_test_split( x,y,test_size=0.20,random_state=100)
 RF=RandomForestClassifier()
 #Train the model
 RF.fit(x_train,y_train)

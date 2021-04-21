@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     public void NextPage(View view) {
         Intent i=new Intent(MainActivity.this,FormPage.class);
         startActivity(i);

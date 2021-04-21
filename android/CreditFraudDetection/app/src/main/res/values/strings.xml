@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CreditFraudDetection</string>
 
-    <string name="ageerror">*Required field</string>
+    <string name="ageerror">*Required field </string>
     <string name="joberror">*Value must be in range of 0 to 3</string>
     <string name="credit">*Value must be in range of 250 to 18524</string>
     <string name="duration">*Value must be in range of 4 to 72</string>
